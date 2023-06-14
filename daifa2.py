@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import logging
 import telebot
@@ -5,14 +6,15 @@ import requests
 import openai
 import re
 import time
-
+import env
 # Set up logging
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
 
 # Load environment variables from .env file
-BOT_API_KEY = "6077801437:AAGXFl4F5rSZJGiz3P-qrGBFDHunm3UULj8"
-OPENAI_API_KEY = "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"
+BOT_API_KEY = os.getenv("BOT_API_KEY")
+openai.organization = "org-nb3PeRsmaorRnPaDH7fmXe9Q"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize Telegram bot
 bot = telebot.TeleBot(BOT_API_KEY)
