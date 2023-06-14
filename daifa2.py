@@ -6,12 +6,17 @@ import requests
 import openai
 import re
 import time
-import env
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+
+
 # Set up logging
 logger = telebot.logger
 telebot.logger.setLevel(logging.DEBUG)
 
 # Load environment variables from .env file
+load_dotenv()
 BOT_API_KEY = os.getenv("BOT_API_KEY")
 openai.organization = "org-nb3PeRsmaorRnPaDH7fmXe9Q"
 openai.api_key = os.getenv("OPENAI_API_KEY")
