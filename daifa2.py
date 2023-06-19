@@ -153,5 +153,5 @@ while True:
 
     # Sleep for a few seconds before attempting to reconnect
 
-    time.sleep(5)
+    time.sleep()
 
