@@ -4,4 +4,4 @@ telebot
 requests
 openai
 pyTelegramBotAPI
---upgrade openai
+pip install --upgrade openai
