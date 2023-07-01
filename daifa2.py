@@ -153,5 +153,6 @@ while True:
 
     # Sleep for a few seconds before attempting to reconnect
 
-    time.sleep()
+    bot.polling(none_stop=True)
+
 
